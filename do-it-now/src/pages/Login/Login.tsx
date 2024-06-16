@@ -1,5 +1,4 @@
 import styles from './Login.module.css';
-import background from '../../assets/login-register-assets/login-register-background.jpg';
 import logo from '../../assets/login-register-assets/logo-icon.png';
 
 // interface ILogin {
@@ -13,7 +12,7 @@ const Login = () => {
     <div className={styles.container}>
 
       <div className={styles.loginBackgroundImage}>
-        <img src={background} alt="background login" className={styles.backgroundImage} />
+        <div className={styles.backgroundImage}></div>
       </div>
 
       <div className={styles.loginContainer}>
@@ -22,8 +21,13 @@ const Login = () => {
           <h1 className={styles.title}>LOGIN</h1>
         </div>
 
-
         <form action="" className={styles.formContainer}>
+
+          <div className={styles.iconsContainer}>
+            <i className="devicon-google-plain"></i>
+            <i className="devicon-facebook-plain"></i>
+          </div>
+
           <div className={styles.nomeUsuarioContainer}>
             <label htmlFor="">Usuário</label>
             <input type="text" />

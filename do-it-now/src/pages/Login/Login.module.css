@@ -1,10 +1,10 @@
-html {
+html, body {
   overflow: hidden;
 }
 
 .container {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   display: flex;
 }
 
@@ -17,10 +17,13 @@ html {
 
 .backgroundImage{
   position: absolute;
-  width: 948px;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   transform: scaleX(-1);
   object-fit: cover;
+  background-image: url("../../assets/login-register-assets/login-register-background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* LOGIN FORM AREA */
@@ -46,7 +49,7 @@ html {
 .title {
   font-family: Reem Kufi Ink, sans-serif, Arial, Helvetica;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 42px;
   color: #660000;
   text-shadow: #8B0000 1px 0 10px;
   margin: 12px 0 12px;
@@ -58,8 +61,29 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 12px 0 12px;
+  margin: 150px 12px 0 12px;
   padding: 12px;
+}
+
+.iconsContainer {
+  width: 419px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px;
+}
+
+i {
+  font-size: 24px;
+  color: #b81212;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+i:hover {
+  filter: drop-shadow(1px 1px 3px red);
 }
 
 label {
@@ -141,8 +165,121 @@ a:hover {
   padding: 12px;
 }
 
+h3 {
+  margin: 8px 0 0;
+}
+
 .registrarContainer {
   width: 419px;
   padding: 8px;
   text-align: center;
+}
+
+/* RESPONSIVIDADE */
+/* Extra large devices 1200px */
+@media (width <= 1200px) {
+  .formContainer{
+    margin-top: 150px;
+  }
+}
+
+/* Large devices 992px */
+@media (width <= 992px) {
+  .loginBackgroundImage{
+    z-index: 1;
+    position: relative;
+  }
+
+  .backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+    background-image: url("../../assets/login-register-assets/login-register-background-2.jpg");
+  }
+
+  .loginContainer {
+    background-color: rgba(25, 25, 25, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .title  {
+    font-size: 28px;
+    color: #fff;
+  }
+
+  i {
+    font-size: 32px;
+    border: none;
+    color: #fff;
+  }
+
+  .formContainer{
+    margin: 96px 0;
+    padding: 0;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  .esqueceuSenhaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .manterConectadoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+}
+
+/* Small devices 600px */
+@media (width <= 600px) {
+  .loginContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .title  {
+    color: #fff;
+  }
+
+  .nomeUsuarioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .senhaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    color: #fff;
+  }
+
+  input {
+    width: 280px;
+    padding: 8px;
+  }
+
+  .entrarBtn {
+    width: 280px;
+  }
 }
