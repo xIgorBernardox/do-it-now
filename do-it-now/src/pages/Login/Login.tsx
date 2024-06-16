@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Login.module.css';
 import logo from '../../assets/login-register-assets/logo-icon.png';
 
@@ -7,7 +9,7 @@ import logo from '../../assets/login-register-assets/logo-icon.png';
 //   email: string;
 // }
 
-const Login = () => {
+const Login: React.FC = () => {
   return(
     <div className={styles.container}>
 
@@ -53,7 +55,7 @@ const Login = () => {
 
           <div className={styles.registrarContainer}>
             <h3>Já tem uma conta?</h3>
-            <a href="">Registre-se</a>
+            <Link to="Registro">Registre-se</Link>
           </div>
         </form>
       </div>

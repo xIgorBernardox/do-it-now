@@ -1,14 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/index';
-import Registro from './pages/Registro/index'
+import Registro from './pages/Registro/index';
 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Login />
-      {/* <Registro /> */}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Registro" element={<Registro />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;

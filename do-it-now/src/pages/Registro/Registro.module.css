@@ -1,0 +1,239 @@
+html, body {
+  overflow: hidden;
+}
+
+h3 {
+  margin: 8px 0 0;
+}
+
+label {
+  font-size: 16px;
+
+}
+
+input {
+  font-family: Poppins, Sans-Serif, Arial, Helvetica;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  transition: .3s ease;
+}
+
+input:focus {
+  box-shadow: #660000 0px 13px 27px -5px, #660000 0px 8px 16px -8px;
+}
+
+a {
+  color: #01CFCF;
+  text-decoration: none;
+  font-family: Poppins, Sans-Serif, Arial, Helvetica;
+  transition: .6s ease;
+}
+
+a:clicked {
+  color: #01CFCF;
+}
+
+a:hover {
+  color: #07f0e4;
+  text-shadow: #07f0e4 1px 0 10px;
+}
+
+/* .iconsContainer {
+  width: 419px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px;
+}
+
+i {
+  font-size: 24px;
+  color: #b81212;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+i:hover {
+  filter: drop-shadow(1px 1px 3px red);
+} */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.registroBackgroundContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.backgroundImage{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: scaleX(-1);
+  object-fit: cover;
+  background-image: url("../../assets/login-register-assets/login-register-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* LOGIN FORM AREA */
+.registroContainer {
+  width: 75%;
+  height: 100%;
+  background-color: #1a1a1a;
+  letter-spacing: 2px;
+  z-index: 1000;
+}
+
+.logoImg {
+  margin: 18px 0 12px;
+}
+
+.formContainer {
+  height: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 12px 0 12px;
+  padding: 12px;
+}
+
+.nomeSobrenomeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 12px;
+}
+
+.nomeUsuarioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrarBtn {
+  background-color: #660000;
+  width: 419px;
+  padding: 12px;
+}
+
+/* RESPONSIVIDADE */
+/* Extra large devices 1200px */
+@media (width <= 1200px) {
+  .formContainer{
+    margin-top: 150px;
+  }
+}
+
+/* Large devices 992px */
+@media (width <= 992px) {
+  .loginBackgroundImage{
+    z-index: 1;
+    position: relative;
+  }
+
+  .backgroundImage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+    background-image: url("../../assets/login-register-assets/login-register-background-2.jpg");
+  }
+
+  .loginContainer {
+    background-color: rgba(25, 25, 25, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .title  {
+    font-size: 28px;
+    color: #fff;
+  }
+
+  i {
+    font-size: 32px;
+    border: none;
+    color: #fff;
+  }
+
+  .formContainer{
+    margin: 96px 0;
+    padding: 0;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  .esqueceuSenhaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .manterConectadoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+}
+
+/* Small devices 600px */
+@media (width <= 600px) {
+  .loginContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .title  {
+    color: #fff;
+  }
+
+  .nomeUsuarioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .senhaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    color: #fff;
+  }
+
+  input {
+    width: 280px;
+    padding: 8px;
+  }
+
+  .entrarBtn {
+    width: 280px;
+  }
+}
