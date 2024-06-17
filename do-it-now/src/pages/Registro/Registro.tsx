@@ -6,9 +6,9 @@ import logo from '../../assets/login-register-assets/logo-icon.png';
 const Registro: React.FC = () => {
   return(
     <div className={styles.container}>
-    
       <div className={styles.registroContainer}>
-        <div className={styles.logoTitleContainer}>
+
+        <div className={styles.logoContainer}>
           <img src={logo} alt="ToDo" className={styles.logoImg} />
         </div>
 
@@ -26,7 +26,7 @@ const Registro: React.FC = () => {
           </div>
 
           <div className={styles.nomeUsuarioContainer}>
-            <label htmlFor="">Usuário</label>
+            <label htmlFor="" className={styles.userName}>Usuário</label>
             <input type="text" />
           </div>
 
@@ -49,7 +49,7 @@ const Registro: React.FC = () => {
             </div>
 
             <div className={styles.confirmarEmailContainer}>
-              <label htmlFor="">Confirme o seu E=mail</label>
+              <label htmlFor="">Confirme o seu E-mail</label>
               <input type="email" />
             </div>
           </div>
@@ -60,7 +60,7 @@ const Registro: React.FC = () => {
 
           <div className={styles.facaLoginContainer}>
             <h3>Já tem uma conta?</h3>
-            <Link to="Login">Faça Login</Link>
+            <Link to="/">Faça Login</Link>
           </div>
         </form>
       </div>
